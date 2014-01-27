@@ -1,0 +1,82 @@
+// Your custom SCSS should be written here...
+$header_height: 18.23%;
+//compass imports
+@import "compass/css3";
+
+//Info: http://compass-style.org/reference/compass/css3/font_face/
+//For deployment, because it needs rails server to work properly
+//@include font-face("Kaushan", font-files("../../fonts/KaushanScript-Regular.ttf", "../../fonts/KaushanScript-Regular.woff","../../fonts/KaushanScript-Regular.svg"), "../../fonts/KaushanScript-Regular.eot", 400);
+
+
+@font-face {
+font-family: Kaushan;
+font-style: normal;
+font-weight: 400;
+src: url(../fonts/KaushanScript-Regular.ttf);
+}
+
+body {
+	background: url(../img/page-bg.jpg);
+}
+
+header {
+	width: 100%;
+	height: $header_height;
+	position: fixed;
+	z-index: 1;
+	top: 0px;
+}
+
+
+.page{
+		margin-top: 120px;
+		font-size: 150px;
+		color: white;
+		text-align: center;
+
+		@include font-size($xxlarge);
+		p.text {
+		//TODO: using compass-rgbapng gem for legacy-browser support
+		background-color: rgba(255,255,255,.2);
+		color: white;
+		@include font-size($large);
+		font-weight: 100;
+		@include  text-shadow(1px 2px 2px rgba(0, 0, 0, 1));
+		font-family: 'Open Sans', Helvetica, Arial, Verdana, sans-serif;
+		padding: 1rem;
+		text-align: center;
+		@include box-shadow(rgba(200, 200, 200, 0.14902) 0px 1px 3px 0px);
+		@include border-radius(17px);
+		line-height: 1.6rem;
+		}
+		.polaroid img {
+  			border: 10px solid #fff;
+  			border-bottom: 45px solid #fff;
+            @include box-shadow(3px 3px 3px #777);
+}
+		.polaroid p{
+			text-align: center;
+  			bottom: 10px;
+  			font: 400 18px/1 Kaushan, cursive;
+  			color: #888;
+  			margin-top: -30px; 
+		}
+}
+
+#radio {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 55px;
+	width: 100%;
+	z-index: 1 !important;
+}
+
+/*=Icons style*/
+.icon-facebook-squared {color: #4096EE;}
+.icon-twitter {color: #C3D9FF;}
+.icon-tumblr {color: #356AA0;}
+
+/*=Text style*/
+.red {color: #fb0000;}
+.yellow {color:#ffe600;}

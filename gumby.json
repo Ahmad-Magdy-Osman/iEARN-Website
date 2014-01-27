@@ -1,0 +1,14 @@
+{
+	"build": {
+		"gumbyPath": "bower_components/gumby",
+		"outPath": "js",
+		"modules": [
+			"fixed",
+			"navbar",
+			"toggleswitch"
+		],
+		"addons" : [
+			"bower_components/gumby-images/gumby.images.js"
+		]
+	}
+}
